@@ -22,15 +22,15 @@ section {
   padding: 0 36px;
 }
 
-.section-title {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 38px;
-  margin: 40px 0;
+.first-section {
+  display: flex;
 }
 
-.featured-thumb {
-  border-radius: 24px;
+.featured-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
 }
 
 .featured-tag {
@@ -44,6 +44,17 @@ section {
   color: #565662;
 }
 
+.section-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  margin: 40px 0;
+}
+
+.featured-thumb {
+  border-radius: 24px;
+}
+
 .featured-title {
   font-weight: 700;
   font-size: 40px;
@@ -55,6 +66,13 @@ section {
 .featured-description {
   margin: 0;
   color: #868686;
+}
+
+/* 이달의 플레이리스트 */
+.playlist-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .playlist-thumb {
@@ -72,6 +90,11 @@ section {
 .playlist-artist {
   color: #868686;
   margin: 0;
+}
+
+.artist-section {
+  display: flex;
+  gap: 20px;
 }
 
 .artist {
@@ -92,16 +115,37 @@ section {
   margin: 24px 0 0;
 }
 
+.station-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
 .station {
   width: 100%;
   aspect-ratio: 1;
   border-radius: 16px;
 }
 
+.charts-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.charts-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .charts {
   list-style: none;
   padding: 0;
   margin: 0;
+  /*추가*/
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
 
 .charts-header {
@@ -122,6 +166,8 @@ section {
 
 .chart {
   width: 100%;
+  display: flex;
+  gap: 40px;
 }
 
 .chart-number {
